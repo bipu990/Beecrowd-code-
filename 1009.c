@@ -1,5 +1,3 @@
-//varible decleration problem :
-//No.11
 #include <stdio.h>
 int main ()
 {
@@ -8,7 +6,7 @@ int main ()
     double x,y;
     scanf ("%lf %lf",&x,&y);
     
-    double m=y*(15/100);
+    double m=y*(15.0/100.0);
     double n=x+m;
     
     printf ("TOTAL = R$ %.2lf\n",n);
