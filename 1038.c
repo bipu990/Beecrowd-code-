@@ -1,36 +1,33 @@
 #include <stdio.h>
-
-int main()
+int main ()
 {
-    int x, y;
-    double total;
-
-    scanf("%d %d", &x, &y);
-
+    int x;
+    float y;
+    scanf ("%d %f",&x,&y);
+    
     switch (x)
     {
         case 1:
-            total = y * 4.00;
-            break;
-
+            float total = y*4.0;
+            printf ("Total: R$ %.2f\n",total);
+            break ;
         case 2:
-            total = y * 4.50;
-            break;
-
+            float total = y*4.5;
+            printf ("Total: R$ %.2f\n",total);
+            break ;
         case 3:
-            total = y * 5.00;
-            break;
-
+            float total = y*5.0;
+            printf ("Total: R$ %.2f\n",total);
+            break ;
         case 4:
-            total = y * 2.00;
-            break;
-
+            float total = y*2.0;
+            printf ("Total: R$ %.2f\n",total);
+            break ;
         case 5:
-            total = y * 1.50;
-            break;
+            float total = y*1.5;
+            printf ("Total: R$ %.2f\n",total);
+            break ;
     }
-
-    printf("Total: R$ %.2lf\n", total);
-
+    
     return 0;
 }
