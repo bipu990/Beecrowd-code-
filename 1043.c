@@ -1,19 +1,25 @@
 #include <stdio.h>
 
-int main()
+float pir (int a,int b,int c)
 {
-    float x, y, z;
-    scanf("%f %f %f", &x, &y, &z);
+    return a+b+c;
+}
+float trap (int a,int b,int c)
+{
+    return (1.0/2)*(a + b)*c;
+}
+int main ()
+{
+    float x,y,z;
+    scanf ("%f %f %f",&x,&y,&z);
     
-    if ((x + y > z) && (x + z > y) && (y + z > x))
+    if (x+y>z && y+z>x && x+z>y)
     {
-        float per = x + y + z;
-        printf("Perimetro = %0.1f\n", per);
+        printf ("Perimetro = %.1f",pir(x,y,z));
     }
-    else 
+    else
     {
-        float area = ((x + y) * z) / 2.0;
-        printf("Area = %0.1f\n", area);
+        printf ("Area = %.1f",trap(x,y,z));
     }
     
     return 0;
