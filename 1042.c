@@ -1,57 +1,29 @@
 #include <stdio.h>
-int main ()
+int main()
 {
-    int x,y,z;
-    scanf ("%d %d %d",&x,&y,&z);
-    
-    if (x<y && x<z)
-    {
-        printf ("%d\n",x);
-        if (y<z)
-        {
-            printf ("%d\n",y);
-            printf ("%d\n",z);
-        }
-        else 
-        {
-            printf ("%d\n",z);
-            printf ("%d\n",y);
-        }
-        printf ("\n");
-        printf ("%d\n%d\n%d\n",x,y,z);
+    int x, y, z;
+    scanf("%d %d %d", &x, &y, &z);
+
+    int smallest, mid, largest;
+
+    if (x < y && x < z) {
+        smallest = x;
+        if (y < z) { mid = y; largest = z; }
+        else       { mid = z; largest = y; }
     }
-    else if (y<x && y<z)
-    {
-        printf ("%d\n",y);
-        if (x<z)
-        {
-             printf ("%d\n",x);
-             printf ("%d\n",z);
-        }
-        else 
-        {
-            printf ("%d\n",z);
-            printf ("%d\n",x);
-        }
-        printf ("\n");
-        printf ("%d\n%d\n%d\n",x,y,z);
+    else if (y < x && y < z) {
+        smallest = y;
+        if (x < z) { mid = x; largest = z; }
+        else       { mid = z; largest = x; }
     }
-    else if (z<y && z<x)
-    {
-        printf ("%d\n",z);
-        if (y<x)
-        {
-             printf ("%d\n",y);
-             printf ("%d\n",x);
-        }
-        else 
-        {
-            printf ("%d\n",x);
-            printf ("%d\n",y);
-        }
-        printf ("\n");
-        printf ("%d\n%d\n%d\n",x,y,z);
+    else {
+        smallest = z;
+        if (y < x) { mid = y; largest = x; }
+        else       { mid = x; largest = y; }
     }
-    
+
+    printf("%d\n%d\n%d\n\n", smallest, mid, largest);
+    printf("%d\n%d\n%d\n", x, y, z);
+
     return 0;
 }
